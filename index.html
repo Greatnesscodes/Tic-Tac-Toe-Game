@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>TIC TAC TOE</h1>
+    <hr />
+
+    <h3>Score</h3>
+
+    <div class="score-board">
+      <p>Player X: <span id="xScore">0</span> </p>
+      <p>Player O: <span id="oScore">0</span></p>
+    </div>
+  </header>
+
+
+
+  <main>
+    <button class="gameBtn rtBtm" id="btn1"></button>
+    <button class="gameBtn mid" id="btn2"></button>
+    <button class="gameBtn ltBtm" id="btn3"></button>
+    <button class="gameBtn rtBtm" id="btn4"></button>
+    <button class="gameBtn mid" id="btn5"></button>
+    <button class="gameBtn ltBtm" id="btn6"></button>
+    <button class="gameBtn rtBtm edgeBtm" id="btn7"></button>
+    <button class="gameBtn mid edgeBtm" id="btn8"></button>
+    <button class="gameBtn ltBtm edgeBtm" id="btn9"></button>
+  </main>
+
+  <footer>
+    <button id="startBtn" onclick="playGame()">Start</button>
+    <button id="resetBtn" onclick="resetGame()">Reset</button>
+  </footer>
+
+  <audio controls id="winner">
+    <source src="audio/sfx-victory1.mp3" type="audio/mp3">
+  </audio>
+  <audio controls id="audio" >
+    <source src="audio/mixkit-serene-view-443.mp3" type="audio/mp3">
+  </audio>
+  <audio controls id="playerClick">
+    <source src="audio/mixkit-video-game-retro-click-237.wav" type="audio/wav">
+  </audio>
+  <div id="modal">
+    <div id="modal-content-x">
+      <img src="img/winner.png" alt="" width="100px" height="100px">
+      <p class="playText">Player X is the winner</p>
+      <span class="close" onclick="closeButton">Close</span>
+    </div>
+  </div>
+  <div id="modaltwo">
+    <div id="modal-content-o">
+      <img src="img/winner.png" alt="" width="100px" height="100px">
+      <p class="playText">Player O is the winner</p>
+      <span class="close" onclick="closeButton_two">Close</span>
+    </div>
+  </div>
+  <div id="modalthree" class="gameOver">
+    <div id="modal-content-over">
+      <p>Game Over</p>
+      <button>Restart Game</button>
+    </div>
+  </div>
+
+
+  <script src='script.js'></script>
+</body>
+
+</html>
