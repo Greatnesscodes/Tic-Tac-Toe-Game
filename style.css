@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(21, 19, 56);
+  background: linear-gradient(
+    90deg,
+    rgba(21, 19, 56, 1) 0%,
+    rgba(18, 40, 74, 1) 89%
+  );
+  font-family:  Helvetica, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+header{
+/* border: 1px solid red; */
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+header >  h1{
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: 2.9em;
+    font-weight: 700;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+hr{
+    width: 160px;
+    height: 7px;
+    margin: 5px 0px;
+    background-color: rgb(238, 255, 7);
+    border: 1px solid yellow;
+    border-radius: 20px ;
+    
+}
+header> h3{
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 5px 0;
+  
+}
+
+.score-board{
+    display: flex;
+    
+}
+.score-board > p{
+    margin: 2px;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+main{
+    /* border: 1px solid orange; */
+    width: 100%;
+    max-width: 370px;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.gameBtn{
+    width: 29%;
+    height: 15vh;
+    background: inherit;
+    margin: 0;
+    color: white;
+    font-size: 2.6em;
+    font-weight: bold;
+}
+.gameBtn:hover{
+    cursor: pointer;
+}
+.rtBtm{
+    border: none;
+    border-right: 3px solid rgb(0, 119, 255);
+    border-bottom: 3px solid rgb(0, 119, 255);
+}
+.mid{
+    border: none;
+    border-bottom: 3px solid rgb(0, 119, 255);
+}
+.ltBtm{
+    border: none;
+    border-left: 3px solid rgb(0, 119, 255);
+    border-bottom: 3px solid rgb(0, 119, 255);
+}
+.edgeBtm{
+    border-bottom: none;
+}
+footer{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 20px;
+}
+#startBtn, #resetBtn{
+   border-radius: 15px;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    color: rgb(53, 52, 52);
+    border: none;
+    
+    background-color: rgb(238, 255, 7);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: Helvetica, sans-serif;
+    transition: all 1s linear;
+}
+#startBtn:hover, #resetBtn:hover{
+    cursor: pointer;
+   
+    
+}
+
+#startBtn:active, #resetBtn:active{
+    transform: scale(0.8);
+}
+#modal, #modaltwo, #modalthree  {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    padding: 1.5rem;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#modal-content-x, #modal-content-o, #modal-content-over{
+    background-color: #fefefe;
+    color: black;  
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.playText{
+    margin: 2rem 0;
+}
+.close {
+    color: #aaa;
+    transition: o.5s;
+    
+}
+.close:hover,
+.close:focus {
+    color: rgb(134, 133, 133);
+    cursor: pointer;
+}
+audio{
+    display: none;
+}
+
+@media (max-width:599px){
+    body{
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+    }
+    
+    header >  h1{
+        
+        font-size: 1.25rem;
+        
+    }
+    hr{
+        width: 100px;
+        height: 4px;
+        margin: 5px 0px;
+        background-color: rgb(238, 255, 7);
+        border: 1px solid yellow;
+        border-radius: 20px ;
+        
+    }
+    header> h3{   
+        font-size: 1rem;
+    }
+    .score-board > p{
+        
+        font-size: .95rem;
+    }
+     /* main{
+        
+        width: 90%;
+        
+    } 
+ .gameBtn{
+        width: 30%;
+        height: 22vh+;
+        
+    }  */
+    #modal, #modaltwo{
+       
+        height: 100vh;
+        width: 80%;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    
+    }
+}
